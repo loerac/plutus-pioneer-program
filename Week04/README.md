@@ -41,7 +41,7 @@ Each type constructor has one type parameter
 1. Used for real world side effects
 2. Used for computations that can fail
 3. Used for computations that can fail with an error message
-4. USed for cumputations that can produces list of string as log output
+4. USed for computations that can produces list of string as log output
 
 How the bind works, it depends on the case.
 1. It is built in magic that combine the two plans that describe the IO actions
@@ -53,6 +53,7 @@ fails; but if the first computation succeeds, then continue.
 4. Combines the lists of log messages from the two parts of the computation.
 
 What are the side-effects that are produces with these computations?
+
 5. Given an `a`, it'll return an `IO a`, the computation returns an `a` and has
 no side-effects
 6. Given an `a`, it'll check the case of `a`; `Nothing` or `Just a`. If it's
